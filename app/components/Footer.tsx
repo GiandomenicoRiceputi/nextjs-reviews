@@ -78,14 +78,17 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="fixed inset-x-0 bottom-0 bg-white pb-safe sm:pb-5">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="flex flex-wrap justify-center sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div
+              key={item.name}
+              className="w-1/2 sm:w-auto pb-6 text-center sm:text-left"
+            >
               <a
                 href={item.href}
                 className="text-sm leading-6 text-gray-600 hover:text-gray-900"
